@@ -27,10 +27,22 @@ public class Program2 {
 //			System.out.println(x);
 //		}
 
-		System.out.println("\n*** Test 3: department insert ***");
-		Department dep = new Department(null, "Music");
-		departmentDao.insert(dep);
-		System.out.println("Inserted new Department: id=" + dep.getId() + " name=" + dep.getName());
+//		System.out.println("\n*** Test 3: department insert ***");
+//		Department dep = new Department(null, "Music");
+//		departmentDao.insert(dep);
+//		System.out.println("Inserted new Department: id=" + dep.getId() + " name=" + dep.getName());
+		
+//		System.out.println("\n*** Test 4: department update ***");
+//		Department dep = departmentDao.findById(3);
+//		dep.setName("Food");
+//		departmentDao.update(dep);
+//		System.out.println("Updated");
+		
+		System.out.println("\n*** Test 5: department deleteById ***");
+		System.out.print("Enter the id to be deleted: ");
+		int id = sc.nextInt();
+		departmentDao.deleteById(id);
+		System.out.println("Deleted");
 		
 		sc.close();
 	}
