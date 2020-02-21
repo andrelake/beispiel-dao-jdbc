@@ -21,13 +21,16 @@ public class Program2 {
 //		Department dep = departmentDao.findById(id);
 //		System.out.println(dep);
 		
-		System.out.println("\n*** Test 2: department findAll ***");
-		List<Department> list = departmentDao.findAll();
-		for(Department x : list) {
-			System.out.println(x);
-		}
+//		System.out.println("\n*** Test 2: department findAll ***");
+//		List<Department> list = departmentDao.findAll();
+//		for(Department x : list) {
+//			System.out.println(x);
+//		}
 
-		
+		System.out.println("\n*** Test 3: department insert ***");
+		Department dep = new Department(null, "Music");
+		departmentDao.insert(dep);
+		System.out.println("Inserted new Department: id=" + dep.getId() + " name=" + dep.getName());
 		
 		sc.close();
 	}
